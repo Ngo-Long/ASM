@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Du lịch Vietravel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+  <script src="node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+  <script src="./js/main.js"></script>
+
+  <style>
+    .badge {
+      background: blue;
+    }
+
+    .badge.badge-warning {
+      background: red;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="main">
+    <div class="container" style="margin-top: 50px;">
+      <nav aria-label="breadcrumb" style="padding-bottom: 10px;">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Du lịch</a></li>
+          <li class="breadcrumb-item"><a href="#">Tin tức du lịch</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Thỏa sức vui chơi cùng Vietravel với hàng trăm tour
+            chất lượng chỉ có tại chương trình khuyến mại Hè 2024</li>
+        </ol>
+      </nav>
+
+      <div class="row">
+        <aside class="col-sm-12 col-lg-3">
+          <div class="card poly-cart">
+            <div class="card-body">
+              <div class="row">
+                <p>Bộ lọc tìm kiếm</p>
+              </div>
+            </div>
+          </div>
+          <div class="card poly-cart">
+            <div class="card-body">
+              <div class="row">
+                <form action="">
+                  <input type="text" class="form-control" placeholder="seach" ng-model="search" />
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  LOẠI HÌNH TOUR
+                </button>
+              </h2>
+
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" ng-click="setSearchTerm('')">Tất cả <span
+                        class="badge badge-secondary">20</span></li>
+                    <li class="list-group-item" ng-click="setSearchTerm('Việt Nam')">Việt Nam<span
+                        class="badge badge-secondary">3</span></li>
+                    <li class="list-group-item" ng-click="setSearchTerm('Trung Quốc')">Trung Quốc<span
+                        class="badge badge-secondary">7</span></li>
+                    <li class="list-group-item" ng-click="setSearchTerm('Hàn Quốc')">Hàn Quốc<span
+                        class="badge badge-secondary">9</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  THÔNG TIN VẬN CHUYỂN
+                </button>
+              </h2>
+
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div id="collapseTWo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Máy bay <span class="badge badge-secondary">20</span>
+                        </li>
+                        <li class="list-group-item">Ô tô <span class="badge badge-secondary">3</span></li>
+                        <li class="list-group-item">Xe máy <span class="badge badge-secondary">7</span></li>
+                        <li class="list-group-item">Tàu hỏa <span class="badge badge-secondary">9</span></li>
+                        <li class="list-group-item">Taxi <span class="badge badge-secondary">11</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  HIỂN THỊ NHỮNG CHUYẾN ĐI CÓ
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Khuyến mãi <span class="badge badge-secondary">20</span></li>
+                    <li class="list-group-item">Giảm giá <span class="badge badge-secondary">3</span></li>
+                    <li class="list-group-item">Săn mã <span class="badge badge-secondary">7</span></li>
+                    <li class="list-group-item">Hết giảm giá <span class="badge badge-secondary">9</span></li>
+                    <li class="list-group-item">Voucher <span class="badge badge-secondary">11</span></li>
+                    <li class="list-group-item">Còn chỗ <span class="badge badge-secondary">15</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <article class="col-sm-12 col-lg-9">
+          <div class="row gx-4 gy-4">
+            <div class="col-12">
+              <h1 style="font-size: 34px; font-weight: 700; text-align: center;">Du lịch Châu Á</h1>
+
+              <hr>
+
+              <p>Du lịch Châu Á: là châu lục lớn và đông dân nhất thế giới. Châu Á cũng có nhiều danh lam thắng cảnh đẹp
+                tại một số quốc gia như Hàn Quốc, Nhật Bản, Trung Quốc, Việt Nam,... và Vietravel là nhà tổ chức du lịch
+                chuyên nghiệp hàng đầu Châu Á, đã 5 lần liên tiếp nhận giải TTG Travel Awards. Hãy cùng Vietravel du
+                lịch Châu Á để tận hưởng những dịch vụ tốt nhất.</p>
+            </div>
+
+            <div class="col-12" style="display: flex; justify-content: space-between;">
+              <div style="display: flex; align-items: center;justify-content: space-between;">
+                <p>Tạo du lịch</p>
+                <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Tạo thêm điểm du lịch
+                </button>
+
+                <button type="button" class="btn btn-primary m-3" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal123">
+                  Giỏ hàng
+                </button>
+
+                <!-- Modal 1-->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content" style="width: 700px;">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> <i class="bi bi-pencil-square"></i> BẢNG
+                          Tạo nơi đi du lịch</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
+                          aria-labelledby="pills-profile-tab" tabindex="0">
+                          <div class="container">
+                            <div class="card">
+                              <div class="card-body">
+                                <form name="productForm" ng-submit="addNewPlace()">
+                                  <div class="form-group">
+                                    <label>Tên sản phẩm</label>
+                                    <input class="form-control" ng-model="newPlace.name" required>
+                                    <span ng-show="productForm.newPlace.name.$error.required" class="text-danger">Vui
+                                      lòng nhập tên sản phẩm</span>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label>Giá</label>
+                                    <input class="form-control" ng-model="newPlace.price" type="number" required>
+                                    <span ng-show="productForm.newPlace.price.$error.required" class="text-danger">Vui
+                                      lòng nhập giá sản phẩm</span>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label>Đất nước</label>
+                                    <input class="form-control" ng-model="newPlace.category" required>
+                                    <span ng-show="productForm.newPlace.category.$error.required"
+                                      class="text-danger">Vui lòng nhập đất nước</span>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label>Mô tả</label>
+                                    <textarea class="form-control" ng-model="newPlace.description" required></textarea>
+                                    <span ng-show="productForm.newPlace.description.$error.required"
+                                      class="text-danger">Vui lòng nhập mô tả sản phẩm</span>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label>Ảnh</label>
+                                    <input type="file" file-model="newPlace.image" name="image" accept="image/*"
+                                      required>
+                                    <span ng-show="productForm.image.$error.required" class="text-danger">Vui lòng chọn
+                                      ảnh</span>
+                                  </div>
+
+                                  <button class="btn btn-primary" type="submit" ng-disabled="productForm.$invalid">Thêm
+                                    sản phẩm</button>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal 2-->
+                <div class="modal fade" id="exampleModal123" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> <i class="bi bi-pencil-square"></i> BẢNG
+                          Giỏ hàng</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel"
+                          aria-labelledby="pills-profile-tab" tabindex="0">
+                          <div class="container">
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="container" ng-controller="myCtrl">
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th>STT</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Giá</th>
+                                            <th>Số lượng</th>
+                                            <th>Thành tiền</th>
+                                            <th></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr ng-repeat="item in cart">
+                                            <td>{{$index + 1}}</td>
+                                            <td>{{item.name}}</td>
+                                            <td>{{item.price}}</td>
+                                            <td>
+                                              <button class="btn btn-primary" ng-click="minus(item)">-</button>
+                                              {{item.quantity}}
+                                              <button class="btn btn-primary" ng-click="plus(item)">+</button>
+                                            </td>
+                                            <td>{{item.price * item.quantity}}</td>
+                                            <td>
+                                              <button class="btn btn-danger" ng-click="remove(item)">Xóa</button>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <h2 style="color: green;">Tổng tiền : {{total()}} $</h2>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: center;">
+                <p>Sắp xếp theo</p>
+                <div style="margin: -10px 0 0 10px;display: flex;align-items: center;justify-content: center;">
+                  <button ng-click="tang()" class="btn btn-danger" style="margin-right: 10px;">Tăng</button>
+                  <button ng-click="giam()" class="btn btn-danger">Giảm</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-4" ng-repeat="p in products | orderBy:sort | filter:search">
+              <div class="card">
+                <img class="card-img-top" style="max-height: 250px;" ng-src="{{p.image}}" alt="{{p.name}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{p.name}}</h5>
+                  <p class="card-text">{{p.description}}</p>
+                  <p class="card-text">Nơi khởi hành: {{p.category}}</p>
+                  <p class="card-text" style="color: red; font-weight: 700;">{{p.price}} ₫</p>
+                  <a href="#" class="btn btn-primary">Đặt ngay</a>
+                  <button type="button" class="btn btn-outline-warning" ng-click="addCart(p)">Thêm vào giỏ</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <nav aria-label="Page navigation example" style="margin-top: 20px;">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <label>Nhập 1 số</label>
+        <input type="text" ng-model="mynum">
+        <h1>Số : {{mynum}}</h1>
+        <h1>Định dạng số :{{mynum | number:2}}</h1>
+        <h1>Định dạng tiền tệ: {{mynum| currency: '$':3}}</h1>
+    </div>
+    <script>
+        angular.module('myApp', []).controller("myCtrl", function ($scope) {
+            $scope.mynum = '1234';
+        }
+        );
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

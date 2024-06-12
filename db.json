@@ -1,0 +1,55 @@
+{
+  "products":
+  [
+      {
+          "id": 1,
+          "name": "Phố Cổ Hội An",
+          "price": 1000,
+          "image": "https://th.bing.com/th?id=OIP.Wm5RlhwTu0OsYSz5xR0A5AHaJQ&w=223&h=279&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+          "category": "Việt Nam",
+          "description": "Một địa điểm du lịch nổi tiếng với kiến trúc cổ kính và văn hóa phong phú."
+      },
+      {
+          "id": 2,
+          "name": "Động Phong Nha",
+          "price": 2000,
+          "image": "https://th.bing.com/th/id/OIP.Ag9ArY58vix9WWZpyTHvZAHaJQ?w=189&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+          "category": "Trung Quốc",
+          "description": "Một hang động kỳ vĩ nằm trong Vườn quốc gia Phong Nha-Kẻ Bàng."
+      },
+      {
+          "id": 3,
+          "name": "Đảo Phú Quốc",
+          "price": 3000,
+          "image": "https://th.bing.com/th?id=OIP.Wm5RlhwTu0OsYSz5xR0A5AHaJQ&w=223&h=279&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+          "category": "Hàn Quốc",
+          "description": "Hòn đảo lớn nhất Việt Nam, nổi tiếng với những bãi biển đẹp và hải sản tươi ngon."
+      },
+      {
+          "id": 4,
+          "name": "Cầu Vàng, Đà Nẵng",
+          "price": 4000,
+          "image": "https://th.bing.com/th/id/OIP.Ag9ArY58vix9WWZpyTHvZAHaJQ?w=189&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+          "category": "Việt Nam",
+          "description": "Một công trình kiến trúc độc đáo nằm trên đỉnh Bà Nà Hills."
+      },
+      {
+          "id": 5,
+          "name": "Chùa Trấn Quốc",
+          "price": 5000,
+          "image": "https://th.bing.com/th?id=OIP.Wm5RlhwTu0OsYSz5xR0A5AHaJQ&w=223&h=279&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
+          "category": "Việt Nam",
+          "description": "Ngôi chùa cổ nhất Hà Nội, nằm trên một hòn đảo nhỏ ở Hồ Tây."
+      },
+      {
+          "id": 6,
+          "name": "Chùa Trấn Quốc",
+          "price": 500,
+          "image": "https://th.bing.com/th/id/OIP.Ag9ArY58vix9WWZpyTHvZAHaJQ?w=189&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7",
+          "category": "Việt Nam",
+          "description": "Ngôi chùa cổ nhất Hà Nội, nằm trên một hòn đảo nhỏ ở Hồ Tây."
+      }
+ 
+      
+  ]
+}
